@@ -1,9 +1,9 @@
 import { getSessionCookies } from "@/action/session-action";
 import { redirect } from "next/navigation";
 
-export default async function page() {
+export default async function LoginButton() {
     const session = await getSessionCookies()
-
+    // console.log(session)
     // ✅ If session exists, redirect to /home
     if (session) {
         redirect("/home");
